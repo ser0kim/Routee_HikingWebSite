@@ -142,3 +142,13 @@ header{top:max(18px,env(safe-area-inset-top));left:20px;right:20px}.nav button#p
 .fork-panel{bottom:calc(var(--mobile-safe) + 215px);padding:16px 10px 12px}.fork-title{display:flex;min-height:20px}.fork-options{margin-top:12px}.fork-options button{min-height:58px}.fork-options small{display:block;margin-top:3px;font-size:9px;font-weight:400;line-height:14px;color:#a5b9ac;white-space:nowrap;letter-spacing:-.2px}
 .finish-guide{width:max-content;max-width:calc(100vw - 40px);padding:8px 10px;white-space:nowrap}
 }
+
+/* Keep the existing HUD, with the app's unit labels and centered columns. */
+.telemetry .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.telemetry .metrics>div{text-align:center}.telemetry .metrics small{color:var(--mint);white-space:nowrap}.telemetry .metrics>div:nth-child(2) b{font-size:25px;line-height:30px;letter-spacing:-.5px}
+.result-copy #app{gap:4px}.result-copy #app span,.result-copy .app-download span{flex:none}.result-copy .app-download{gap:5px}.result-copy .app-download svg{flex:0 0 16px;width:16px;height:16px}
+@media(max-width:700px){.intro-group .metrics>div:last-child{text-align:center}.intro-group .metrics>div:nth-child(2) b{font-size:20px;line-height:25px}.intro-group .metrics{gap:8px}}
+@media(max-width:350px){.intro-group .metrics b,.intro-group .metrics>div:nth-child(2) b{font-size:18px}}
+
+.result-copy #app{gap:6px}.result-copy .app-download,.result-copy .instagram-link,.result-copy .again{gap:6px}.result-copy .instagram-link svg,.result-copy .again svg{flex:0 0 16px;width:16px;height:16px}.result-copy .instagram-link span,.result-copy .again span{flex:none}.controls .camera{gap:8px}.camera>span{gap:10px}.view-controls .sound-toggle{gap:5px}.fork-options button{gap:8px}
+
+.poster .watermark{filter:none;opacity:.55}

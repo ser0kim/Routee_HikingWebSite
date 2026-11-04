@@ -6,5 +6,6 @@ var RouteePace = (() => {
     return {speed,mode:speed<=115?'걷기':'뛰기',cadence,stepDistance:speed*.04/cadence,motion:.55+t*.6};
   }
   function time(seconds) { const minutes=Math.floor(Math.max(0,seconds)/60);return Math.floor(minutes/60)+'h '+minutes%60+'m'; }
-  return {min,max,walk,run,profile,time};
+  function recordingTime(seconds) { const minutes=Math.floor(Math.max(0,seconds)/60);return String(Math.floor(minutes/60)).padStart(2,'0')+':'+String(minutes%60).padStart(2,'0'); }
+  return {min,max,walk,run,profile,time,recordingTime};
 })();
