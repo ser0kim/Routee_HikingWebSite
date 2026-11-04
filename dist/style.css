@@ -139,6 +139,6 @@ header{top:max(18px,env(safe-area-inset-top));left:20px;right:20px}.nav button#p
 @media(max-width:700px){.intro-group .telemetry{width:min(215px,100%)}.intro-group .metrics{grid-template-columns:1fr 1.2fr 1fr;gap:10px}.fork-panel{left:50%;right:auto;transform:translateX(-50%);width:min(280px,calc(100vw - 48px))}.fork-title{justify-content:center}.fork-options{gap:6px}.fork-options button{padding:8px 7px;gap:6px;font-size:12px}}
 
 @media(max-width:700px){
-.fork-panel{bottom:calc(var(--mobile-safe) + 215px)}.fork-title{display:flex}.fork-options button{min-height:58px}.fork-options small{display:block;margin-top:3px;font-size:9px;font-weight:400;line-height:14px;color:#a5b9ac;white-space:nowrap;letter-spacing:-.2px}
+.fork-panel{bottom:calc(var(--mobile-safe) + 215px);padding:16px 10px 12px}.fork-title{display:flex;min-height:20px}.fork-options{margin-top:12px}.fork-options button{min-height:58px}.fork-options small{display:block;margin-top:3px;font-size:9px;font-weight:400;line-height:14px;color:#a5b9ac;white-space:nowrap;letter-spacing:-.2px}
 .finish-guide{width:max-content;max-width:calc(100vw - 40px);padding:8px 10px;white-space:nowrap}
 }
