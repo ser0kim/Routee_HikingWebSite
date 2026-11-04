@@ -28,3 +28,31 @@
 .fork-panel{left:50%;right:auto;bottom:164px;transform:translateX(-50%);width:min(330px,calc(100vw - 48px))}@media(max-width:700px){.fork-panel{bottom:300px}}
 /* Keep the sun/moon visible above the record and uphill information. */
 @media(min-width:701px){:root{--trail-panel-top:max(178px,calc(17vh + 38px))}.telemetry{top:var(--trail-panel-top)}.climb-meter{top:calc(var(--trail-panel-top) + 215px)}.view-label{top:calc(var(--trail-panel-top) + 275px)}}@media(max-width:700px){.telemetry{bottom:146px}.climb-meter{top:calc(32% + 16px)}.view-label{top:calc(39% + 16px)}}
+
+/* Soft Routee light behind the finished record; consistent action sizing. */
+.modal{background-color:#10191b;background-image:radial-gradient(ellipse at 22% 22%,#63f6fd24,transparent 58%),radial-gradient(ellipse at 85% 78%,#dfff601c,transparent 60%),linear-gradient(135deg,#102325f2,#15251bf5)}
+.result-copy{width:350px;max-width:100%;flex-shrink:0}.result-layout{gap:clamp(48px,7vw,100px)}
+.result-copy .app-download,.result-copy .instagram-link,.result-copy .again{min-height:48px;padding:13px 20px;gap:10px;font-size:12px;line-height:20px;display:flex;align-items:center;justify-content:center}
+.result-copy a svg,.result-copy .again svg{display:block;flex:0 0 18px;width:18px;height:18px;stroke-linecap:round;stroke-linejoin:round}
+.view-tabs{align-items:stretch}.view-tabs button{min-height:38px;display:flex;align-items:center;justify-content:center;gap:8px;line-height:18px}
+.view-tabs svg{width:14px;height:14px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.app-screen .app-actions img,.editor-final-actions img{width:28px;height:28px;object-fit:contain;flex:none}
+@media(min-width:701px){
+:root{--trail-edge:32px}.telemetry{right:var(--trail-edge);width:284px;padding:21px 23px}.recording{font-size:11px}.recording span{font-size:9px}.metrics small{font-size:10px}.metrics b{font-size:25px}.metrics{gap:16px}.climb-meter,.view-label,.zone{right:var(--trail-edge)}.climb-meter{top:calc(var(--trail-panel-top) + 218px)}.view-label{top:calc(var(--trail-panel-top) + 278px)}.photo-peek{right:var(--trail-edge);top:calc(var(--trail-panel-top) + 320px)}
+}
+@media(max-width:700px){.result-layout{gap:30px}.result-copy{width:100%;max-width:340px}.telemetry{left:24px;right:16px;bottom:170px;padding:14px 18px}.recording{font-size:10px}.metrics{margin-top:10px}.metrics small{font-size:9px}.metrics b{font-size:24px}.zone{bottom:310px}.photo-stack{bottom:300px}.fork-panel{bottom:360px}.instruction{max-width:calc(100vw - 40px);white-space:normal;line-height:1.7}.result-copy .view-tabs{flex-wrap:wrap}}
+@media(min-width:701px) and (max-width:1000px){.intro{left:32px}h1{font-size:48px}.intro p{max-width:270px}.telemetry{width:270px}.result-layout{gap:40px;padding:32px}.result-copy{width:310px}.result-copy h2{font-size:32px}.photo-stack img{width:48px;height:62px}}
+
+.result-copy h2{word-break:keep-all}
+
+/* Resolution-independent stop button, matching the supplied black/lime UI. */
+.finish-control{position:relative;flex:none;width:60px;height:60px}
+.controls .finish{font-family:Pretendard,sans-serif;width:100%;height:100%;padding:0!important;gap:0!important;background:#101213;color:#e5ff4f;font-size:14px;font-weight:600;line-height:20px;box-shadow:0 6px 24px #0004}
+.controls .finish span{display:block}.controls .finish:hover:not(:disabled){background:#202521}.controls .finish:active:not(:disabled){transform:scale(.96)}
+.finish-guide{position:absolute;right:0;bottom:calc(100% + 10px);width:242px;padding:10px 14px;border:1px solid #63f6fd40;border-radius:13px;background:#152721f5;color:#e6f1e9;font:11px/17px Pretendard,sans-serif;text-align:left;box-shadow:0 8px 25px #0003;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:5}
+.finish-guide:after{content:'';position:absolute;right:23px;bottom:-5px;width:8px;height:8px;transform:rotate(45deg);background:#152721;border-right:1px solid #63f6fd40;border-bottom:1px solid #63f6fd40}.finish-guide strong{color:#e5ff4f;font-weight:600}.finish-guide small{display:block;font-size:10px;color:#a7c0b0}
+.guide-intro .finish-guide,.finish-control:hover .finish-guide,.finish-control:focus-within .finish-guide{opacity:1;visibility:visible;transform:none}
+.bottom.guide-intro .instruction,.bottom:has(.finish-control:hover) .instruction,.bottom:has(.finish-control:focus-within) .instruction{visibility:hidden}
+@media(min-width:701px){.fork-panel{bottom:210px}}
+@media(max-width:700px){.finish-control{width:56px;height:56px}.controls .finish{font-size:14px}.finish-guide{width:238px;padding:8px 12px;bottom:calc(100% + 8px)}}
+@media(prefers-reduced-motion:reduce){.finish-guide{transition:none}}

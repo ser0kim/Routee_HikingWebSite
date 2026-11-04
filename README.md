@@ -37,3 +37,15 @@ node tests/editor-model.test.cjs
 - `SELFIE-ASSET.md`: 게임 스타일 셀피 이미지 제작 기록
 
 [웹사이트](https://routee-mountain-studio.ratedkid4.chatgpt.site)
+
+## Cloudflare Pages 배포
+
+- GitHub 저장소: `ser0kim/Routee_HikingWebSite`
+- 배포 브랜치: `feat/routee-hiking-web` (main에 머지하지 않고 사용)
+- Framework preset: `None`
+- Build command: `exit 0`
+- Build output directory: `dist`
+- Root directory: 저장소 루트 (기본값)
+- 환경 변수 및 서버 설정: 불필요
+
+위 브랜치에 푸시하면 연결된 Pages 프로젝트가 자동으로 배포됩니다.
