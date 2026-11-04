@@ -9,5 +9,7 @@ var RouteeSummit = (() => {
       framing:reduced?1:smooth(t/1.3),walking:!reduced&&t<walkDuration,
       shutter:!reduced&&t>=shutterAt,done:t>=(reduced?.4:duration)};
   }
-  return {duration,walkDuration,shutterAt,sample};
+  function canSavePhoto(count){return Number.isInteger(count)&&count>=0&&count<=5}
+  function photoCrop(width,height){const w=Math.min(width,height*.75),h=Math.min(height,width/.75);return {x:Math.max(0,Math.min(width-w,width*.5-w/2)),y:Math.max(0,Math.min(height-h,height*.48-h/2)),width:w,height:h}}
+  return {duration,walkDuration,shutterAt,sample,canSavePhoto,photoCrop};
 })();
