@@ -135,3 +135,5 @@ header{top:max(18px,env(safe-area-inset-top));left:20px;right:20px}.nav button#p
 @media(max-width:350px){.intro-group .telemetry{width:240px}.intro-group .metrics{gap:12px}.intro-group .metrics b{font-size:18px}.intro-group .metrics>div:nth-child(2) b{font-size:17px}}
 
 @media(max-width:700px) and (max-height:620px){.fork-panel,.continue-panel{bottom:calc(var(--mobile-safe) + 230px)}.photo-stack{bottom:calc(var(--mobile-safe) + 260px)}}
+
+@media(max-width:700px){.intro-group .telemetry{width:min(215px,100%)}.intro-group .metrics{grid-template-columns:1fr 1.2fr 1fr;gap:10px}.fork-panel{left:50%;right:auto;transform:translateX(-50%);width:min(280px,calc(100vw - 48px))}.fork-title{justify-content:center}.fork-options{gap:6px}.fork-options button{padding:8px 7px;gap:6px;font-size:12px}}
